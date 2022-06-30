@@ -1,8 +1,18 @@
 import * as React from 'react';
+import { Provider } from 'react-redux';
+
+import TodoList from '@pages/TodoList';
+import store from '@redux/store';
+
 
 import './style.scss';
 
-function App() {
-  return <div className="divvvvv">{'react setup from scratch without cra testing ts'}</div>;
+const App: React.FC  = ()=> {
+  return (
+    <Provider store={store}>
+      <TodoList/>
+    </Provider>
+    )
+  
 }
 export default App;

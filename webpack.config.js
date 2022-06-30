@@ -41,7 +41,12 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.css', '.scss'],
+    alias: {
+      '@shared': path.resolve(__dirname, './src/shared/'),
+      '@pages': path.resolve(__dirname, './src/pages/'),
+      '@redux': path.resolve(__dirname, './src/redux/'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
